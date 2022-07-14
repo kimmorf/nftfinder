@@ -43,9 +43,11 @@ export const onReactionAdd: OnReactionHandler = async (
       switch (reaction.emoji.name) {
         case 'stone':
           client.users.fetch(user.id).then((user) => {
-            user.send('Pau no cu de quem ta lendo.');
+            user.send(`Pau no cu de quem ta lendo, e o ${user.username} está sofrendo.`);
             reaction.users.remove(user.id);
+            client.user?.setUsername('sexo sexo')
            });
+
           break;
       
         default:
